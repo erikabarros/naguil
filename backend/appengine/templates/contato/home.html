@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% block menu %}
+{{ banana('sobre') }}
+{% endblock %}
+{% block body %}
+
+    <div class="row clearfix">
+		<div class="col-md-6 column">
+			<div class="jumbotron">
+				<h1>
+					Encontre-nos!
+				</h1>
+				<p>
+					Entre em contato conosco!
+				</p>
+				<p>
+					Nossos telefones são:
+				</p>
+				<li>
+					(12) 99129-2568
+				</li>
+				<li>
+					(12) 3912-7769
+				</li>
+
+			</div>
+		</div>
+		<div class="col-md-6 column">
+		<iframe src="https://www.google.com/maps/d/embed?mid=z9Nu1zUXAVy0.kUxlfwdrpxao" width="640" height="480"></iframe>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

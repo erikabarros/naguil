@@ -1,0 +1,23 @@
+{% extends 'formacaos/formacao_base.html' %}
+{% block body %}
+    {% set formacao=formacao or None %}
+    {% set errors=errors or None %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <br/>
+
+                <div class="well">
+                    <h1 class="text-center">{% trans %}Formacao Form{% endtrans %}</h1>
+
+                    <form action="{{ save_path }}" method="post" role="form">
+                        {{ csrf_input() }}
+                        {{ form_input(_('Nome'),'nome',formacao.nome,errors.nome) }}
+                        <button type="submit" class="btn btn-success">{% trans %}Save{% endtrans %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
